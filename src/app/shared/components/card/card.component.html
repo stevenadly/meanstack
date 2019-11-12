@@ -1,0 +1,16 @@
+            <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" [src]="card?.imgSrc" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">{{card?.title}}</h5>
+                      <p class="card-text" [innerHtml]="card?.description  | appTrim:10 | safe: 'html'">
+                              <!--  slice:0:100 -->
+                                
+                        </p>
+                <button class="btn btn-primary" (click)="card?.BtnFn()">{{card?.btnTxt}}</button>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                            <li class="list-group-item">{{card?.footerDescription}}</li>
+                        </ul>
+
+                      
+                  </div>

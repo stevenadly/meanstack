@@ -1,0 +1,39 @@
+
+      <div class="dropdown cart">
+        <button class="btn btn-secondary dropdown-toggle" (click)='toggleDropDown()' type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          {{counter}}
+        </button>
+        <div class="dropdown-menu cart-container show" *ngIf='dropdownMenu && ifthereProduct'  aria-labelledby="dropdownMenuButton">
+          <table class="table" >
+            <thead>
+              <tr>
+                <th scope="col">product image</th>
+                <th scope="col">product name </th>
+                <th scope="col">price</th>
+                <th scope="col">quantity</th>
+                <th scope="col">add and delete</th>
+                
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let cartItem of cartItems;let i = index">
+               <td>
+                 <img [src]="cartItem.imgSrc" class="w-50px" alt="">
+               </td>
+               <td>{{cartItem.name}}</td>
+               <td>{{cartItem.price}}</td>
+               <td>{{cartItem.quantity}}</td>
+               <td>
+                 <span> 
+                   <button class="btn btn-primary" (click)="increaseQuantity(i)">+</button>
+                 </span>
+                 <span> 
+                  <button class="btn btn-danger"  (click)="decreaseQuantity(i)">-</button>
+                </span>
+               </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+

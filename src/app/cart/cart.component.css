@@ -1,0 +1,31 @@
+.cart{
+    display: flex !important;
+    margin-left:auto !important;
+}
+.cart>button{
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50% !important;
+    -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+    -ms-border-radius: 50% !important;
+    -o-border-radius: 50% !important;
+    background: #ddd !important;
+    border:2px solid #bbb !important;
+    font-size: 2rem;
+    color: white;
+    margin :auto;
+    line-height: .8;
+}
+.cart-container{
+    width:700px;
+    right: 0px;
+    left: auto;
+}
+.dropdown-toggle::after{
+    display: none;
+}
+
+.w-50px{
+    width: 50px !important;
+}
