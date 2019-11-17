@@ -5,7 +5,6 @@ import { CategoriesRoutingModule } from './categories-routing.module';
 import { CategoriesComponent } from './categories/categories.component';
 import { SharedModule } from '../shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
-// import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({

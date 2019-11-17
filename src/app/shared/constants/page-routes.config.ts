@@ -14,6 +14,11 @@ export const PAGES={
     products:{
         path:'products',
         url:'/products'
+    },
+    admin:{
+        path:'admin',
+        url:'/admin',
     }
+    
 
 }

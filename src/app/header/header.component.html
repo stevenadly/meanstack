@@ -2,20 +2,35 @@
   <div class="container">
     <a class="navbar-brand" [routerLink]="['']">Navbar</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"  (click)="toggleNavbar()">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
+    <div class="collapse navbar-collapse" [ngClass]="{'show': navbarresponsive}" id="navbarNav">
       <ul class="navbar-nav justify-content-center">
 
         <li *ngFor="let url of urls" class="nav-item">
           <a class="nav-link" [routerLink]="[url.url]">{{ url.text }}</a>
         </li>
 
+<li>
+  <div class="dropdown open">
+    <button class="btn btn-secondary dropdown-toggle dropdown-btn-to-link" (click)='toggleDropDown()' type="button" id="triggerId" data-toggle="dropdown" aria-haspopup="true"
+        aria-expanded="false">
+          admin
+        </button>
+    <div class="dropdown-menu" aria-labelledby="triggerId"  [ngClass]="{'show': dropdownMenu}">
+      <a class="dropdown-item" [routerLink]="'admin'">admin</a>
+      <a class="dropdown-item" [routerLink]="'admin/dashboard'">dashboard</a> 
+      <a class="dropdown-item" [routerLink]="'admin/categories'">categories</a>
+      <a class="dropdown-item" [routerLink]="'admin/products'">products</a>
+    </div>
+  </div>
+  
+</li>
+
       </ul>
 
       <app-cart></app-cart>
     </div>
-
   </div>
 </nav>

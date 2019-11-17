@@ -30,10 +30,6 @@ export class CartComponent implements OnInit {
       };
 
 
- 
-
-
-
       // to prevent duplication of products and increase 
       var index = this.cartItems.findIndex(o => o.id === cartItem.id)
       if (index === -1) { this.cartItems.push(cartItem);  }
@@ -47,7 +43,6 @@ export class CartComponent implements OnInit {
 
 
   increaseQuantity(i){
-   
     this.cartItems[i].quantity++;
   }
   decreaseQuantity(i){

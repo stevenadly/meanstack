@@ -13,11 +13,12 @@ const routes: Routes = [
   {path:PAGES.products.path , loadChildren: () => import(`./products/products.module`).then(m => m.ProductsModule) },
   {path:`${PAGES.products.path}/:id` , loadChildren: () => import(`./products/products.module`).then(m => m.ProductsModule) },
   {path:PAGES.categories.path , loadChildren: () => import(`./categories/categories.module`).then(m => m.CategoriesModule) },
+  {path:PAGES.admin.path , loadChildren: () => import(`./admin/admin.module`).then(m => m.AdminModule) },
 
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{ enableTracing: false })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
