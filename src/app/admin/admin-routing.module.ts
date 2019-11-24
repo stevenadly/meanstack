@@ -4,8 +4,6 @@ import { AdminComponent } from './admin/admin.component';
 import { Routes, RouterModule } from '@angular/router';
 import { PAGES } from '../shared/constants/page-routes.config';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { AdminProductsComponent } from './admin-products/admin-products.component';
-import { AdminCategoriesComponent } from './admin-categories/admin-categories.component';
 
 const routes: Routes = [
   {
